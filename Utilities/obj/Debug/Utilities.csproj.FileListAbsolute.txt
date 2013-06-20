@@ -3,3 +3,8 @@ C:\Users\Administrator\Desktop\StockPhoneSystem\Utilities\bin\Debug\Utilities.pd
 C:\Users\Administrator\Desktop\StockPhoneSystem\Utilities\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\Administrator\Desktop\StockPhoneSystem\Utilities\obj\Debug\Utilities.dll
 C:\Users\Administrator\Desktop\StockPhoneSystem\Utilities\obj\Debug\Utilities.pdb
+C:\Developer\StockPhoneSystem\Utilities\bin\Debug\Utilities.dll
+C:\Developer\StockPhoneSystem\Utilities\bin\Debug\Utilities.pdb
+C:\Developer\StockPhoneSystem\Utilities\obj\Debug\ResolveAssemblyReference.cache
+C:\Developer\StockPhoneSystem\Utilities\obj\Debug\Utilities.dll
+C:\Developer\StockPhoneSystem\Utilities\obj\Debug\Utilities.pdb

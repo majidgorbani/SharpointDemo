@@ -5,3 +5,10 @@ C:\Users\Administrator\Desktop\StockPhoneSystem\StockPhoneSystem\obj\Debug\Stock
 C:\Users\Administrator\Desktop\StockPhoneSystem\StockPhoneSystem\obj\Debug\StockPhoneSystem.pdb
 C:\Users\Administrator\Desktop\StockPhoneSystem\StockPhoneSystem\bin\Debug\Utilities.dll
 C:\Users\Administrator\Desktop\StockPhoneSystem\StockPhoneSystem\bin\Debug\Utilities.pdb
+C:\Developer\StockPhoneSystem\StockPhoneSystem\bin\Debug\StockPhoneSystem.dll
+C:\Developer\StockPhoneSystem\StockPhoneSystem\bin\Debug\StockPhoneSystem.pdb
+C:\Developer\StockPhoneSystem\StockPhoneSystem\bin\Debug\Utilities.dll
+C:\Developer\StockPhoneSystem\StockPhoneSystem\bin\Debug\Utilities.pdb
+C:\Developer\StockPhoneSystem\StockPhoneSystem\obj\Debug\ResolveAssemblyReference.cache
+C:\Developer\StockPhoneSystem\StockPhoneSystem\obj\Debug\StockPhoneSystem.dll
+C:\Developer\StockPhoneSystem\StockPhoneSystem\obj\Debug\StockPhoneSystem.pdb

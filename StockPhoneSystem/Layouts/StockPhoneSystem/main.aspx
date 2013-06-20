@@ -8,7 +8,7 @@
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="main.aspx.cs" Inherits="StockPhoneSystem.Layouts.StockPhoneSystem.main" DynamicMasterPageFile="~masterurl/default.master" %>
 
 <asp:Content ID="PageHead" ContentPlaceHolderID="PlaceHolderAdditionalPageHead" runat="server">
-
+this is a header
 </asp:Content>
 
 <asp:Content ID="Main" ContentPlaceHolderID="PlaceHolderMain" runat="server">
