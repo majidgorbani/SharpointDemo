@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="StockPhoneSystem - ListDefinition_PhoneReg" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/StockPhoneSystem-ListDefinition_PhoneReg" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <MetaData>
+    <ContentTypes>
+      <ContentType ID="0x0100cefa4e8a7c224cf8ad1045bcb7c9e887" Name="StockPhoneSystem - ContentType_PhoneReg" Group="Custom Content Types" Description="My Content Type" Inherits="TRUE" Version="0">
+        <FieldRefs>
+          <FieldRef ID="{551EA286-5872-4F9D-9DB9-3B3140C6A389}" DisplayName="Phone ID"            Name="PhoneID"  Required="FALSE" ></FieldRef>
+          <FieldRef ID="{35007526-CD6F-4397-B71D-57CBAEC8C31E}" DisplayName="IMEI Number"         Name="IMEI"     Required="FALSE" ></FieldRef>
+          <FieldRef ID="{364E357B-DA9A-4D9D-A807-597F0317D1AF}" DisplayName="Supplier"            Name="Supplier"  Required="FALSE" ></FieldRef>
+          <FieldRef ID="{DA3D974A-C2F0-40CA-8B8E-E185200A096A}" DisplayName="Registeration Date"  Name="RegDate"   Required="FALSE" ></FieldRef>
+          <FieldRef ID="{1CDE9CEB-898A-476D-95EA-C5B7B8EF7080}" DisplayName="Dispatch Date"       Name="DisDate"   Required="FALSE" ></FieldRef>
+          <FieldRef ID="{E604B199-C723-4EE4-9BDD-21C4E7B6E9E6}" DisplayName="Registered by"       Name="regUser"   Required="FALSE" ></FieldRef>
+          <FieldRef ID="{8ECFED6C-35C0-49AF-B2A5-6FB50E15E5D1}" DisplayName="Dispatched By"       Name="disUser"   Required="FALSE" ></FieldRef>
+          <FieldRef ID="{CA540C78-77A6-4347-BCF9-73553CB4029A}" DisplayName="Satatus"             Name="Status"   Required="FALSE" ></FieldRef>
+          <FieldRef ID="{DAA0C18C-3EA9-4C56-9544-03EB10BD3070}" DisplayName="LocationCode"        Name="Location" Required="FALSE" ></FieldRef>
+          
+        </FieldRefs>
+      </ContentType>
+    </ContentTypes>
+    <Fields>
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="Attachments"></FieldRef>
+          <FieldRef Name="LinkTitle"></FieldRef>
+          <FieldRef Name="PhoneID"></FieldRef>
+          <FieldRef Name="IMEI" ></FieldRef>
+          <FieldRef Name="Supplier" ></FieldRef>
+          <FieldRef Name="RegDate"></FieldRef>
+          <FieldRef Name="DisDate"></FieldRef>
+          <FieldRef Name="regUser"></FieldRef>
+          <FieldRef Name="disUser"></FieldRef>
+          <FieldRef Name="Status"></FieldRef>
+          <FieldRef Name="Location"></FieldRef>
+
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/images/generic.png" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="ID"> </FieldRef>
+          <FieldRef Name="IMEI" ></FieldRef>
+          <FieldRef Name="Supplier" ></FieldRef>
+          <FieldRef Name="RegDate"></FieldRef>
+          <FieldRef Name="DisDate"></FieldRef>
+          <FieldRef Name="regUser"></FieldRef>
+          <FieldRef Name="disUser"></FieldRef>
+          <FieldRef Name="Status"></FieldRef>
+          <FieldRef Name="Location"></FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="ID">
+            </FieldRef>
+            
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main"  />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

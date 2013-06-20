@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<List xmlns:ows="Microsoft SharePoint" Title="StockPhoneSystem - ListDefinition_phone" FolderCreation="FALSE" Direction="$Resources:Direction;" Url="Lists/StockPhoneSystem-ListDefinition_phone" BaseType="0" xmlns="http://schemas.microsoft.com/sharepoint/">
+  <MetaData>
+    <ContentTypes>
+      <ContentType ID="0x010043199bf6cc71493f96562934aa8d1369" Name="StockPhoneSystem - ContentType_phone" Group="Custom Content Types" Description="My Content Type" Inherits="TRUE" Version="0">
+        <FieldRefs>
+          <FieldRef ID="{4D803CD3-86AC-4F98-B56F-3C47A2ECB997}" DisplayName="Description" Name="Description" Required="FALSE" ></FieldRef>
+          <FieldRef ID="{31B031A5-5C7C-4544-AA20-B92350162881}" Name="Color" DisplayName="Color" Required="TRUE" />
+          <FieldRef ID="{8069775F-B0F1-4F54-BD4B-BC0EB72DD0E1}" DisplayName="PhoneID"   Required="FALSE" Name="PhoneID" ></FieldRef>
+          <FieldRef ID="{8B44AEB8-06E3-4C43-9AEF-F6B571A939ED}" DisplayName="Brand Name" Name="BrandName"  Required="TRUE"></FieldRef>
+          <FieldRef ID="{35E5E887-89B2-4FC9-83C4-3E8C44F2B526}" DisplayName="Memory"     Name="Memory"     Required="TRUE"></FieldRef>
+          <FieldRef ID="{40BFF54F-BDE0-4DC9-9402-1E1C812C615A}" DisplayName="Model Code"  Name="ModelCode"  Required="TRUE"></FieldRef>
+        </FieldRefs>
+      </ContentType>
+    </ContentTypes>
+    <Fields>
+      <Field ID="{31b031a5-5c7c-4544-aa20-b92350162881}" Type="Choice" DisplayName="Color" Group="Custom Columns" Name="Color">
+
+    <CHOICES>
+      <CHOICE>Black</CHOICE>
+      <CHOICE>White</CHOICE>
+      <CHOICE>Brown</CHOICE>
+    </CHOICES>
+  </Field>
+    </Fields>
+    <Views>
+      <View BaseViewID="0" Type="HTML" MobileView="TRUE" TabularView="FALSE">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <FieldRef Name="LinkTitleNoMenu"></FieldRef>
+          <FieldRef Name="Description"></FieldRef>
+          <FieldRef Name="PhoneID"></FieldRef>
+          <FieldRef Name="BrandName"></FieldRef>
+          <FieldRef Name="Color"></FieldRef>
+          <FieldRef Name="Memory"></FieldRef>
+          <FieldRef  Name="ModelCode"></FieldRef>
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="Modified" Ascending="FALSE">
+            </FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="AddNewAnnouncement" Location="Resource(wss,addnewitem)" />
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_ONET_HOME)" />
+        </ParameterBindings>
+      </View>
+      <View BaseViewID="1" Type="HTML" WebPartZoneID="Main" DisplayName="$Resources:core,objectiv_schema_mwsidcamlidC24;" DefaultView="TRUE" MobileView="TRUE" MobileDefaultView="TRUE" SetupPath="pages\viewpage.aspx" ImageUrl="/_layouts/images/generic.png" Url="AllItems.aspx">
+        <Toolbar Type="Standard" />
+        <XslLink Default="TRUE">main.xsl</XslLink>
+        <RowLimit Paged="TRUE">30</RowLimit>
+        <ViewFields>
+          <!--<FieldRef Name="Attachments"></FieldRef>-->
+          <!--<FieldRef Name="LinkTitle"></FieldRef>-->
+          <FieldRef Name="ModelCode"></FieldRef>
+          <FieldRef Name="Description"></FieldRef>
+          <FieldRef Name="PhoneID"></FieldRef>
+          <FieldRef Name="BrandName"></FieldRef>
+          <FieldRef Name="Color"></FieldRef>
+          <FieldRef Name="Memory"></FieldRef>
+          
+        </ViewFields>
+        <Query>
+          <OrderBy>
+            <FieldRef Name="PhoneID"></FieldRef>
+          </OrderBy>
+        </Query>
+        <ParameterBindings>
+          <ParameterBinding Name="NoAnnouncements" Location="Resource(wss,noXinviewofY_LIST)" />
+          <ParameterBinding Name="NoAnnouncementsHowTo" Location="Resource(wss,noXinviewofY_DEFAULT)" />
+        </ParameterBindings>
+      </View>
+    </Views>
+    <Forms>
+      <Form Type="DisplayForm" Url="DispForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="EditForm" Url="EditForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+      <Form Type="NewForm" Url="NewForm.aspx" SetupPath="pages\form.aspx" WebPartZoneID="Main" />
+    </Forms>
+  </MetaData>
+</List>

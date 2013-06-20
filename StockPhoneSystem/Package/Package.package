@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="7853ce8d-717f-4a60-9453-318d4ab42d74" solutionId="7853ce8d-717f-4a60-9453-318d4ab42d74" resetWebServer="false" name="StockPhoneSystem" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="efaab5d7-06ab-4db6-9fdb-4e1af7c158fc" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="6dd26b06-6528-4681-b6ea-44d2a96b708b" />
+  </projectItems>
+</package>

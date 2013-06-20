@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Field ID="{31B031A5-5C7C-4544-AA20-B92350162881}"
+   Type="Choice"
+         DisplayName="Color"
+          Group="Custom Columns"
+         Name="Color">
+
+    <CHOICES>
+      <CHOICE>Black</CHOICE>
+      <CHOICE>White</CHOICE>
+      <CHOICE>Brown</CHOICE>
+    </CHOICES>
+  </Field>
+</Elements>

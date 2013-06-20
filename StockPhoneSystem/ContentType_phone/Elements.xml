@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Item (0x01) -->
+  <ContentType ID="0x010043199bf6cc71493f96562934aa8d1369"
+               Name="StockPhoneSystem - ContentType_phone"
+               Group="Custom Content Types"
+               Description="My Content Type"
+               Inherits="TRUE"
+               Version="0">
+    <FieldRefs>
+      <FieldRef ID="{31B031A5-5C7C-4544-AA20-B92350162881}"
+          Name="Color" DisplayName="Color" Required="TRUE"     />
+   
+    </FieldRefs>
+  </ContentType>
+</Elements>

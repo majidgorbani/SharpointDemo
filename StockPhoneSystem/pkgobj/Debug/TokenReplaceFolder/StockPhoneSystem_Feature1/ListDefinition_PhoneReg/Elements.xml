@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+
+  <Field ID="{551EA286-5872-4F9D-9DB9-3B3140C6A389}" DisplayName="Phone ID" Name="PhoneID" Group="Custom Columns" Required="FALSE" Type="Text"></Field>
+  <Field ID="{35007526-CD6F-4397-B71D-57CBAEC8C31E}"  DisplayName="IMEI Number" LinkToItem="TRUE" LinkToItemAllowed="Required" ListItemMenu="TRUE" Name="IMEI" Group="Custom Columns" Required="FALSE" Type="Text"></Field>
+  <Field ID="{364E357B-DA9A-4D9D-A807-597F0317D1AF}" DisplayName="Supplier" Name="Supplier" Group="Custom Columns" Required="FALSE" Type="Text"></Field>
+  <Field ID="{DA3D974A-C2F0-40CA-8B8E-E185200A096A}" DisplayName="Registeration Date" Group="Custom Columns" Name="RegDate" Required="FALSE" Type="DateTime"></Field>
+  <Field ID="{1CDE9CEB-898A-476D-95EA-C5B7B8EF7080}" DisplayName="Dispatch Date" Group="Custom Columns" Name="DisDate" Required="FALSE" Type="DateTime"></Field>
+  <Field ID="{E604B199-C723-4EE4-9BDD-21C4E7B6E9E6}" DisplayName="Registered by" Group="Custom Columns" Name="regUser" Required="FALSE" Type="Text"></Field>
+  <Field ID="{8ECFED6C-35C0-49AF-B2A5-6FB50E15E5D1}" DisplayName="Dispatched By" Group="Custom Columns" Name="disUser" Required="FALSE" Type="Text"></Field>
+  <Field ID="{CA540C78-77A6-4347-BCF9-73553CB4029A}" DisplayName="Satatus" Group="Custom Columns" Name="Status" Required="FALSE" Type="Choice">
+    <CHOICES>
+      <CHOICE>in</CHOICE>
+      <CHOICE>out</CHOICE>
+    </CHOICES>
+    
+  </Field>
+  <Field ID="{DAA0C18C-3EA9-4C56-9544-03EB10BD3070}" DisplayName="LocationCode" Group="Custom Columns" Name="Location" Required="FALSE" Type="Text"></Field>
+
+
+  <!--PhoneID, IMEI, Supplier, RegDate, DisDate, regUser, disUser, Status, Location-->
+
+
+
+  <!-- Do not change the value of the Name attribute below. If it does not match the folder name of the List Definition project item, an error will occur when the project is run. -->
+    <ListTemplate
+        Name="ListDefinition_PhoneReg"
+        Type="10001"
+        BaseType="0"
+        OnQuickLaunch="TRUE"
+        SecurityBits="11"
+        Sequence="410"
+        DisplayName="StockPhoneSystem - ListDefinition_PhoneReg"
+        Description="My List Definition"
+        Image="/_layouts/images/itgen.png"/>
+</Elements>

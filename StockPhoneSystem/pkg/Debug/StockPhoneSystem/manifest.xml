@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="7853ce8d-717f-4a60-9453-318d4ab42d74" SharePointProductVersion="14.0">
+  <Assemblies>
+    <Assembly Location="StockPhoneSystem.dll" DeploymentTarget="GlobalAssemblyCache" />
+  </Assemblies>
+  <TemplateFiles>
+    <TemplateFile Location="Layouts\StockPhoneSystem\dpItem.aspx" />
+    <TemplateFile Location="Layouts\StockPhoneSystem\main.aspx" />
+    <TemplateFile Location="Layouts\StockPhoneSystem\Regin.aspx" />
+  </TemplateFiles>
+  <FeatureManifests>
+    <FeatureManifest Location="StockPhoneSystem_Feature1\Feature.xml" />
+  </FeatureManifests>
+</Solution>

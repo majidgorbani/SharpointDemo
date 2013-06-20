@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{49DA5E57-7D65-4741-87D2-AF7C7F574D4C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>StockPhoneSystem</RootNamespace>
+    <AssemblyName>StockPhoneSystem</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{BB1F664B-9266-4fd6-B973-E1E44974B511};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+    <ActiveDeploymentConfiguration>Default</ActiveDeploymentConfiguration>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.SharePoint.Linq, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\ISAPI\Microsoft.SharePoint.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Security" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Features\Feature1\Feature1.EventReceiver.cs">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\StockPhoneSystem\dpItem.aspx.cs">
+      <DependentUpon>dpItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\StockPhoneSystem\dpItem.aspx.designer.cs">
+      <DependentUpon>dpItem.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\StockPhoneSystem\main.aspx.cs">
+      <DependentUpon>main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\StockPhoneSystem\main.aspx.designer.cs">
+      <DependentUpon>main.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\StockPhoneSystem\Regin.aspx.cs">
+      <DependentUpon>Regin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\StockPhoneSystem\Regin.aspx.designer.cs">
+      <DependentUpon>Regin.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ColorElement\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{46a457ca-7b64-4282-b9a7-7ecd5367ee71}</SharePointProjectItemId>
+    </None>
+    <None Include="ContentType_PhoneReg\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{159b2561-e338-460a-859c-4fe4eed6e77f}</SharePointProjectItemId>
+    </None>
+    <None Include="ContentType_phone\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{79f45778-2d2f-461c-a7e9-f26919081b25}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{efaab5d7-06ab-4db6-9fdb-4e1af7c158fc}</FeatureId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{6dd26b06-6528-4681-b6ea-44d2a96b708b}</SharePointProjectItemId>
+    </None>
+    <None Include="ListDefinition_PhoneReg\ListInstance2\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5c438ae1-ecb2-438e-bc6f-5fb3f0b5b23e}</SharePointProjectItemId>
+    </None>
+    <None Include="ListDefinition_PhoneReg\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d6bd889d-0a3a-43fa-a2a6-390512f3925c}</SharePointProjectItemId>
+    </None>
+    <None Include="ListDefinition_phone\ListInstance1\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{f5a145de-9d53-4ca3-ad78-33b926030ed6}</SharePointProjectItemId>
+    </None>
+    <None Include="ListDefinition_phone\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c7102050-644d-460a-8a87-ef690942d8c6}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{7853ce8d-717f-4a60-9453-318d4ab42d74}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utilities\Utilities.csproj">
+      <Project>{CBDB7F0A-BE95-433A-ACD5-32DF2095BEA8}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ColorElement\Elements.xml" />
+    <Content Include="ContentType_PhoneReg\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ContentType_phone\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </Content>
+    <Content Include="Layouts\StockPhoneSystem\dpItem.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Layouts\StockPhoneSystem\main.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="Layouts\StockPhoneSystem\Regin.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+    <Content Include="ListDefinition_PhoneReg\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ListDefinition_PhoneReg\ListInstance2\Elements.xml" />
+    <Content Include="ListDefinition_PhoneReg\Schema.xml" />
+    <Content Include="ListDefinition_phone\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ListDefinition_phone\ListInstance1\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ListDefinition_phone\Schema.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>
