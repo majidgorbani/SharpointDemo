@@ -78,8 +78,23 @@ namespace StockPhoneSystem.Layouts.StockPhoneSystem
                             SPList listPhoneReg = web.Lists.TryGetList("PhoneReg");
                             if (ImeiExist(listPhoneReg, Imei))
                             {
-                                lblInfo.Style.Add("color", "green");
-                                lblInfo.Text = "imei exist";
+                                SPListItemCollection sc = listPhoneReg.Items;
+                                foreach (SPListItem phreg in sc)
+                                {
+                                    if (phreg["IMEI"].ToString() == Imei)
+                                    {     
+                                        lblInfo.Style.Add("color", "green");
+                                        lblInfo.Text = "Found item";
+                                        phreg["Status"] = "out";
+                                        phreg["Location"] = "vasteras";
+                                        phreg.Update();
+                                        return;
+                                       
+                                    }
+                                    
+                                }
+
+                           
                             }
                             else
                             {
