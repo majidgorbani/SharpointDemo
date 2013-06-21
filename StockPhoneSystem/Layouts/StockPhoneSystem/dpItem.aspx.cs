@@ -50,14 +50,18 @@ namespace StockPhoneSystem.Layouts.StockPhoneSystem
                         row["Status"] = item["Status"].ToString();
                         row["Location Code"] = item["Location"].ToString();
                         row["Reg Date"] = item["RegDate"].ToString();
-                        row["Disp Date"] = item["DisDate"].ToString();
+
+                        if (item["DisDate"] != null)
+                            row["Disp Date"] = item["DisDate"].ToString();
+                      
+
                         row["Reg User"] = item["regUser"].ToString();
-                        /*
-                        if (item["disUser"].ToString() != "")
+
+                        if (item["disUser"] != null)
                             row["Disp User"] = item["disUser"].ToString();
-                        else
-                            row["Disp User"] = "-";
-                        */
+                        
+                           
+                        
                     }
 
                     gvMyViewout.DataSource = table.DefaultView;
@@ -94,15 +98,25 @@ namespace StockPhoneSystem.Layouts.StockPhoneSystem
                                 foreach (SPListItem phreg in sc)
                                 {
                                     if (phreg["IMEI"].ToString() == Imei)
-                                    {     
-                                        lblInfo.Style.Add("color", "green");
-                                        lblInfo.Text = "Found item";
-                                        phreg["Status"] = "out";                       
-                                        phreg["DisDate"] = DateTime.Now;
-                                        phreg["disUser"] = Context.User.Identity.Name;
-                                        //phreg["Location"] = "vasteras";
-                                        phreg.Update();
-                                        return;
+                                    {
+                                        if (phreg["Status"].ToString() != "out")
+                                        {
+                                            lblInfo.Style.Add("color", "green");
+                                            lblInfo.Text = "Found item";
+                                            phreg["Status"] = "out";
+                                            phreg["DisDate"] = DateTime.Now;
+                                            phreg["disUser"] = Context.User.Identity.Name;
+                                            //phreg["Location"] = "vasteras";
+                                            phreg.Update();
+                                            
+                                        }
+                                        else
+                                        {
+                                            lblInfo.Style.Add("color", "green");
+                                            lblInfo.Text = "the item has already been dispatched";
+                                            return;
+                                        }
+
                                        
                                     }
                                     
