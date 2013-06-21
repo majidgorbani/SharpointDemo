@@ -35,17 +35,29 @@ namespace StockPhoneSystem.Layouts.StockPhoneSystem
                     table.Columns.Add("Supplier", typeof(string));
                     table.Columns.Add("Status", typeof(string));
                     table.Columns.Add("Location Code", typeof(string));
+
+                    table.Columns.Add("Reg Date", typeof(DateTime));
+                    table.Columns.Add("Disp Date", typeof(DateTime));
+                    table.Columns.Add("Reg User", typeof(string));
+                    table.Columns.Add("Disp User", typeof(string));
                     DataRow row;
                     foreach (SPListItem item in items)
                     {
                         row = table.Rows.Add();
-
                         row["Model Code"] = item["ModelCode"].ToString();
                         row["IMEI Number"] = item["IMEI"].ToString();
                         row["Supplier"] = item["Supplier"].ToString();
                         row["Status"] = item["Status"].ToString();
                         row["Location Code"] = item["Location"].ToString();
-
+                        row["Reg Date"] = item["RegDate"].ToString();
+                        row["Disp Date"] = item["DisDate"].ToString();
+                        row["Reg User"] = item["regUser"].ToString();
+                        /*
+                        if (item["disUser"].ToString() != "")
+                            row["Disp User"] = item["disUser"].ToString();
+                        else
+                            row["Disp User"] = "-";
+                        */
                     }
 
                     gvMyViewout.DataSource = table.DefaultView;
@@ -85,8 +97,10 @@ namespace StockPhoneSystem.Layouts.StockPhoneSystem
                                     {     
                                         lblInfo.Style.Add("color", "green");
                                         lblInfo.Text = "Found item";
-                                        phreg["Status"] = "out";
-                                        phreg["Location"] = "vasteras";
+                                        phreg["Status"] = "out";                       
+                                        phreg["DisDate"] = DateTime.Now;
+                                        phreg["disUser"] = Context.User.Identity.Name;
+                                        //phreg["Location"] = "vasteras";
                                         phreg.Update();
                                         return;
                                        
