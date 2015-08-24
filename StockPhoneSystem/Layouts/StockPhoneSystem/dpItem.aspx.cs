@@ -10,7 +10,7 @@ namespace StockPhoneSystem.Layouts.StockPhoneSystem
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            // test my test
             
         }
         protected override void OnPreRenderComplete(EventArgs e)
